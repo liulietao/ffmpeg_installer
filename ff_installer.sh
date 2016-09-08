@@ -96,9 +96,9 @@ sudo make install
 
 # install libvpx
 cd ~/ffmpeg_sources
-git clone --depth 1 http://git.chromium.org/webm/libvpx.git
-cd libvpx
-./configure --prefix="$HOME/ffmpeg_build" --disable-examples
+curl -sL https://github.com/webmproject/libvpx/archive/v1.6.0.tar.gz
+cd libvpx-1.6.0
+./configure --prefix="$HOME/ffmpeg_build" --enable-vp8 --enable-vp9 --disable-examples --disable-docs
 make
 make install
 make clean
