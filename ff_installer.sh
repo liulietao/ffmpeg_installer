@@ -89,7 +89,7 @@ cd ~/src/ffmpeg-source
 wget http://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.gz
 tar xzvf libtheora-1.1.1.tar.gz
 cd libtheora-1.1.1
-./configure --disable-shared
+./configure --prefix="$HOME/ffmpeg_build" --with-ogg="$HOME/ffmpeg_build" --disable-shared
 make
 sudo make install
 
